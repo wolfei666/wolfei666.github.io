@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wolfei666.github.io/</id>
     <title>wolf</title>
-    <updated>2021-04-16T11:16:24.116Z</updated>
+    <updated>2021-04-16T11:17:02.686Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wolfei666.github.io/"/>
     <link rel="self" href="https://wolfei666.github.io/atom.xml"/>
@@ -16,9 +16,9 @@
         <link href="https://wolfei666.github.io/post/test/">
         </link>
         <updated>2021-04-16T10:53:06.000Z</updated>
-        <summary type="html"><![CDATA[<p>每日更新的学习进度</p>
+        <summary type="html"><![CDATA[<p>✍️每日更新的学习进度</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>每日更新的学习进度</p>
+        <content type="html"><![CDATA[<p>✍️每日更新的学习进度</p>
 <!-- more -->
 <p>📋4.15<br>
 高数：学习了定积分概念及其性质<br>
