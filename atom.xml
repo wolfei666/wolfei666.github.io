@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wolfei666.github.io/</id>
     <title>wolf</title>
-    <updated>2021-04-16T13:00:02.994Z</updated>
+    <updated>2021-04-16T13:12:38.529Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wolfei666.github.io/"/>
     <link rel="self" href="https://wolfei666.github.io/atom.xml"/>
@@ -10,6 +10,34 @@
     <logo>https://wolfei666.github.io/images/avatar.png</logo>
     <icon>https://wolfei666.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, wolf</rights>
+    <entry>
+        <title type="html"><![CDATA[Hgame CTF]]></title>
+        <id>https://wolfei666.github.io/post/hgame-ctf/</id>
+        <link href="https://wolfei666.github.io/post/hgame-ctf/">
+        </link>
+        <updated>2021-04-16T13:09:28.000Z</updated>
+        <summary type="html"><![CDATA[<p>很久之前的比赛了，现在才整理出来</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>很久之前的比赛了，现在才整理出来</p>
+<!-- more -->
+<p>👉WEB<br>
+1.watermelon<br>
+合成大西瓜<br>
+通过调整浏览器的大小通关<br>
+可能某些大佬是通过修改JS代码</p>
+<p>👉Crypto<br>
+1.Base家族<br>
+Base64解码得到一段文字后Base32解码再Base16解码即可得到flag</p>
+<p>👉MISC</p>
+<ol>
+<li>DNS<br>
+从网站上下载一个Pcapng的文件，追踪TCP流可以看到一个网址flag.hgame2021.cf，直接在浏览器中输入只有一个弹窗显示flag is here but not here。直接查看源代码得到提示：<br>
+<img src="https://wolfei666.github.io//post-images/1618578636930.png" alt="" loading="lazy"><br>
+上网搜索SPF，https://blog.csdn.net/ssjjtt1997/article/details/98945375，根据这篇文章的测试方法，使用nslookup得到flag<br>
+<img src="https://wolfei666.github.io//post-images/1618578642551.png" alt="" loading="lazy"></li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Bugku题解(有空更新)]]></title>
         <id>https://wolfei666.github.io/post/bugku-ti-jie-you-kong-geng-xin/</id>
