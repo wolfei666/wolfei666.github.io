@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wolfei666.github.io/</id>
     <title>wolf</title>
-    <updated>2021-04-16T10:25:44.909Z</updated>
+    <updated>2021-04-16T10:26:53.586Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wolfei666.github.io/"/>
     <link rel="self" href="https://wolfei666.github.io/atom.xml"/>
@@ -16,10 +16,7 @@
         <link href="https://wolfei666.github.io/post/cymm/">
         </link>
         <updated>2021-04-16T10:20:51.000Z</updated>
-        <summary type="html"><![CDATA[<p>test😘<img src="https://wolfei666.github.io//post-images/1618568484649.jpg" alt="" loading="lazy"></p>
-]]></summary>
-        <content type="html"><![CDATA[<p>test😘<img src="https://wolfei666.github.io//post-images/1618568484649.jpg" alt="" loading="lazy"></p>
-<!-- more -->
+        <content type="html"><![CDATA[<p>test😘</p>
 ]]></content>
     </entry>
     <entry>
