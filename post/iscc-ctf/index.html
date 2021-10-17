@@ -2,26 +2,24 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>关于 | wolf</title>
+<title>ISCC ctf2021部分WP | wolf</title>
 <link rel="shortcut icon" href="https://wolfei666.github.io//favicon.ico?v=1634458960187">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://wolfei666.github.io//styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="关于 | wolf - Atom Feed" href="https://wolfei666.github.io//atom.xml">
+<link rel="alternate" type="application/atom+xml" title="ISCC ctf2021部分WP | wolf - Atom Feed" href="https://wolfei666.github.io//atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="
-来到这里的你和我好有缘哦！
+    <meta name="description" content="web
+1.ISCC客服冲冲冲（一）
+打开界面如下
+要求让笨蛋小狗一号赢
+好吧那就来帮帮这只菜狗🐶
 
-🏠 关于本站
-记录我的学习轨迹
-👨‍💻 博主是谁
-在校大学僧👩‍💻
-⛹ 兴趣爱好
-爱好读书，运动（跑步🏃‍♀，滑板），上网冲浪，周杰伦/林俊杰/17🎮
-📬 联系我呀
-mail:wolfsinc..." />
+想要在firefox f12查看器直接修改js代码里小狗一号的票数值
+提示“禁止刷票”（哼凭啥2号可以刷票
+换个思路，阻止小狗2号的刷票..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -90,50 +88,73 @@ mail:wolfsinc..." />
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              关于
+              ISCC ctf2021部分WP
             </h2>
             <div class="post-info">
               <span>
-                2021-04-16
+                2021-05-05
               </span>
               <span>
-                1 min read
+                2 min read
               </span>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <blockquote>
-<p>来到这里的你和我好有缘哦！</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<p>记录我的学习轨迹</p>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<p>在校大学僧👩‍💻</p>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<p>爱好读书，运动（跑步🏃‍♀，滑板），上网冲浪，周杰伦/林俊杰/17🎮</p>
-<h2 id="联系我呀">📬 联系我呀</h2>
-<p>mail:wolfsince2000@gmail.com🍻</p>
+                <p>web<br>
+1.ISCC客服冲冲冲（一）<br>
+打开界面如下<br>
+要求让笨蛋小狗一号赢<br>
+好吧那就来帮帮这只菜狗🐶<br>
+<img src="https://wolfei666.github.io//post-images/1620200559378.png" alt="" loading="lazy"><br>
+想要在firefox f12查看器直接修改js代码里小狗一号的票数值<br>
+提示“禁止刷票”（哼凭啥2号可以刷票<br>
+换个思路，阻止小狗2号的刷票，将他的onclick函数简单粗暴的删掉，再手动投票超过2号，得到flag</p>
+<p>2.这是啥<br>
+打开网址如下<br>
+<img src="https://wolfei666.github.io//post-images/1620200892715.png" alt="" loading="lazy"><br>
+查看源码<br>
+<img src="https://wolfei666.github.io//post-images/1620200939385.png" alt="" loading="lazy"><br>
+一堆奇怪的中括号!+之类，故想到可能是某种加密，上网搜索与中括号相关的加密，找到了jother加密<br>
+看了这篇博文 https://blog.csdn.net/weixin_45728976/article/details/109219997<br>
+将这一堆奇怪的符号放到chrome的控制台回车就得到flag啦</p>
+<p>3.正则匹配最后的倔强<br>
+从网站界面得到提示进入robots.txt<br>
+从robots.txt得到提示进入code.txt，code.txt内容如下<br>
+<img src="https://wolfei666.github.io//post-images/1620202722462.png" alt="" loading="lazy"><br>
+有点看不懂长度小于8且大小大于9999999的操作，没想到上网搜到了原题……<br>
+https://www.cnblogs.com/liuyimin/p/7668005.html<br>
+学到了😅<br>
+ps:后来我又尝试不用00截断也能得到flag,emmmm就是感觉最前面的函数没有发挥作用</p>
+<p>misc<br>
+1.Retrieve the passcode<br>
+下载附件，附件名字叫做Scatter，打开压缩包有一个txt文件，是一堆三维坐标（PS：我刚开始以为是某种加密还解密了一会儿后来看到附件名觉得似曾相识百度了一下才知道……好🥒啊我），将三维坐标通过str.replace函数替换为标准的坐标形式，然后用scatter画出来，转一转，可以看到<br>
+<img src="https://wolfei666.github.io//post-images/1620218261844.png" alt="" loading="lazy"><br>
+用这串密码解压computer.pdf可以得到<br>
+<img src="https://wolfei666.github.io//post-images/1620219634140.png" alt="" loading="lazy"><br>
+又是我们熟悉的摩斯电码，翻译得到CONGRATULATIONTHEFLAGISCHALLENGEISCCTWOZEROTWOONE<br>
+输入flag不知道哪里不对……<br>
+2.海市蜃楼<br>
+将压缩包里的word后缀名改为zip，可以查看content里面的flag</p>
 
               </div>
               <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99">🏠 关于本站</a></li>
-<li><a href="#%E5%8D%9A%E4%B8%BB%E6%98%AF%E8%B0%81">👨‍💻 博主是谁</a></li>
-<li><a href="#%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD">⛹ 兴趣爱好</a></li>
-<li><a href="#%E8%81%94%E7%B3%BB%E6%88%91%E5%91%80">📬 联系我呀</a></li>
-</ul>
-</li>
-</ul>
-
+                
               </div>
             </div>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://wolfei666.github.io/post/hgame-ctf/">
+              <h3 class="post-title">
+                Hgame CTF
+              </h3>
+            </a>
+          </div>
         
 
         

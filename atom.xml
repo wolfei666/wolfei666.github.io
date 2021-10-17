@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wolfei666.github.io/</id>
     <title>wolf</title>
-    <updated>2021-04-22T14:53:10.290Z</updated>
+    <updated>2021-10-17T08:22:42.668Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wolfei666.github.io/"/>
     <link rel="self" href="https://wolfei666.github.io/atom.xml"/>
@@ -10,6 +10,80 @@
     <logo>https://wolfei666.github.io/images/avatar.png</logo>
     <icon>https://wolfei666.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, wolf</rights>
+    <entry>
+        <title type="html"><![CDATA[buuctf 部分题解]]></title>
+        <id>https://wolfei666.github.io/post/buuctf-bu-fen-ti-jie/</id>
+        <link href="https://wolfei666.github.io/post/buuctf-bu-fen-ti-jie/">
+        </link>
+        <updated>2021-10-17T08:17:30.000Z</updated>
+        <content type="html"><![CDATA[<p>misc</p>
+<h1 id="二维码">二维码</h1>
+<p>下载压缩包得到一个二维码</p>
+<p>在线扫码后显示secretishere，不是flag</p>
+<p>用010看了下里面有个叫4numbers.txt的文件</p>
+<p>用binwalk分离，得到压缩包，里面的txt是加密的</p>
+<p>就暴力破解，4个数字，得到flag.</p>
+<h1 id="你竟然赶我走">你竟然赶我走</h1>
+<p>直接拖入010editor,末尾得到flag</p>
+<h1 id="n种方法解决">n种方法解决</h1>
+<p>下载压缩包里面有一个exe文件，用010打开看</p>
+<p>有前缀</p>
+<p>上网搜索发现是图片的base64格式，直接在线将base64还原为图片，得到一张二维码图片</p>
+<p>扫描得到flag</p>
+<h1 id="大白">大白</h1>
+<p>记得之前查方法的时候看过这张图片，下面少了一点……</p>
+<p>又看到提示看不全图片？</p>
+<p>打开010看到前面IHDR那段有不一样的颜色，而且底部显示校验失败，上网搜索了IHDR后面的意思，是长和宽，斗胆将长改的跟宽一样长，果然，图片的下半部分显示出来了，得到flag</p>
+<p>(改了长之后，校验也不报错了)</p>
+<h1 id="基础破解">基础破解</h1>
+<p>就嗯破，题目已经说了是四位数字密码，破解后得到txt文件中的base64字符串</p>
+<h1 id="乌镇峰会种图">乌镇峰会种图</h1>
+<p>拖入010，得到flag……</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ISCC ctf2021部分WP]]></title>
+        <id>https://wolfei666.github.io/post/iscc-ctf/</id>
+        <link href="https://wolfei666.github.io/post/iscc-ctf/">
+        </link>
+        <updated>2021-05-05T07:40:54.000Z</updated>
+        <content type="html"><![CDATA[<p>web<br>
+1.ISCC客服冲冲冲（一）<br>
+打开界面如下<br>
+要求让笨蛋小狗一号赢<br>
+好吧那就来帮帮这只菜狗🐶<br>
+<img src="https://wolfei666.github.io//post-images/1620200559378.png" alt="" loading="lazy"><br>
+想要在firefox f12查看器直接修改js代码里小狗一号的票数值<br>
+提示“禁止刷票”（哼凭啥2号可以刷票<br>
+换个思路，阻止小狗2号的刷票，将他的onclick函数简单粗暴的删掉，再手动投票超过2号，得到flag</p>
+<p>2.这是啥<br>
+打开网址如下<br>
+<img src="https://wolfei666.github.io//post-images/1620200892715.png" alt="" loading="lazy"><br>
+查看源码<br>
+<img src="https://wolfei666.github.io//post-images/1620200939385.png" alt="" loading="lazy"><br>
+一堆奇怪的中括号!+之类，故想到可能是某种加密，上网搜索与中括号相关的加密，找到了jother加密<br>
+看了这篇博文 https://blog.csdn.net/weixin_45728976/article/details/109219997<br>
+将这一堆奇怪的符号放到chrome的控制台回车就得到flag啦</p>
+<p>3.正则匹配最后的倔强<br>
+从网站界面得到提示进入robots.txt<br>
+从robots.txt得到提示进入code.txt，code.txt内容如下<br>
+<img src="https://wolfei666.github.io//post-images/1620202722462.png" alt="" loading="lazy"><br>
+有点看不懂长度小于8且大小大于9999999的操作，没想到上网搜到了原题……<br>
+https://www.cnblogs.com/liuyimin/p/7668005.html<br>
+学到了😅<br>
+ps:后来我又尝试不用00截断也能得到flag,emmmm就是感觉最前面的函数没有发挥作用</p>
+<p>misc<br>
+1.Retrieve the passcode<br>
+下载附件，附件名字叫做Scatter，打开压缩包有一个txt文件，是一堆三维坐标（PS：我刚开始以为是某种加密还解密了一会儿后来看到附件名觉得似曾相识百度了一下才知道……好🥒啊我），将三维坐标通过str.replace函数替换为标准的坐标形式，然后用scatter画出来，转一转，可以看到<br>
+<img src="https://wolfei666.github.io//post-images/1620218261844.png" alt="" loading="lazy"><br>
+用这串密码解压computer.pdf可以得到<br>
+<img src="https://wolfei666.github.io//post-images/1620219634140.png" alt="" loading="lazy"><br>
+又是我们熟悉的摩斯电码，翻译得到CONGRATULATIONTHEFLAGISCHALLENGEISCCTWOZEROTWOONE<br>
+输入flag不知道哪里不对……<br>
+2.海市蜃楼<br>
+将压缩包里的word后缀名改为zip，可以查看content里面的flag</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hgame CTF]]></title>
         <id>https://wolfei666.github.io/post/hgame-ctf/</id>
