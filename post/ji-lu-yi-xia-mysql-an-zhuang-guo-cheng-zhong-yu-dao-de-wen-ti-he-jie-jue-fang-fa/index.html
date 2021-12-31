@@ -2,24 +2,19 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hello Gridea | wolf</title>
+<title>记录一下mysql安装过程中遇到的问题和解决方法 | wolf</title>
 <link rel="shortcut icon" href="https://wolfei666.github.io//favicon.ico?v=1640951040643">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://wolfei666.github.io//styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Hello Gridea | wolf - Atom Feed" href="https://wolfei666.github.io//atom.xml">
+<link rel="alternate" type="application/atom+xml" title="记录一下mysql安装过程中遇到的问题和解决方法 | wolf - Atom Feed" href="https://wolfei666.github.io//atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="👏  欢迎使用 Gridea ！
-✍️  Gridea 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...
-
-Github
-Gridea 主页
-示例网站
-特性👇
-📝  你可以使用最酷的 Markdo..." />
-    <meta name="keywords" content="Gridea" />
+    <meta name="description" content="一直没怎么用过mysql,上课用的是Microsoft sqlserver，图形化界面非常方便，最近为了学习sql注入，决定装一个Mysql
+1.NET HELPMSG 3534
+这是在输入net start mysql之后出现的问题（忘记..." />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -87,56 +82,40 @@ Gridea 主页
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              Hello Gridea
+              记录一下mysql安装过程中遇到的问题和解决方法
             </h2>
             <div class="post-info">
               <span>
-                2018-12-12
+                2021-12-31
               </span>
               <span>
-                2 min read
+                1 min read
               </span>
-              
-                <a href="https://wolfei666.github.io/tag/KFCct1lbR/" class="post-tag">
-                  # Gridea
-                </a>
               
             </div>
             
-              <img class="post-feature-image" src="https://wolfei666.github.io//post-images/hello-gridea.png" alt="">
-            
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+                <p>一直没怎么用过mysql,上课用的是Microsoft sqlserver，图形化界面非常方便，最近为了学习sql注入，决定装一个Mysql</p>
+<h1 id="1net-helpmsg-3534">1.NET HELPMSG 3534</h1>
+<p>这是在输入net start mysql之后出现的问题（忘记截图了）<br>
+解决方法：查看错误日志（每个人的情况不同，最好是看一下报错内容）<br>
+我的错误在于3306端口可能被占用<br>
+在cmd命令行中输入<br>
+//netstat -ano<br>
+<img src="https://wolfei666.github.io//post-images/1640949330493.png" alt="" loading="lazy"><br>
+可以看到占用3306端口的进程号<br>
+打开任务管理器-&gt;找到相关进程号即可结束进程<br>
+2.密码不对或者忘记密码<br>
+首先确认是管理员身份打开的cmd窗口；<br>
+<img src="https://wolfei666.github.io//post-images/1640949700693.png" alt="" loading="lazy"><br>
+在输入上面第一条命令之后，打开mysql/bin/data文件夹，删除所有内容<br>
+执行完所有命令之后，再次打开data文件，即可看到新生成的许多文件，找到err结尾的文件，里面可以看到新生成的密码，输入即可。</p>
 
               </div>
               <div class="toc-container">
                 <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E7%89%B9%E6%80%A7">特性👇</a></li>
-</ul>
-</li>
+<li><a href="#1net-helpmsg-3534">1.NET HELPMSG 3534</a></li>
 </ul>
 
               </div>
@@ -144,6 +123,15 @@ Gridea 主页
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://wolfei666.github.io/post/buuctf-bu-fen-ti-jie/">
+              <h3 class="post-title">
+                buuctf 部分题解
+              </h3>
+            </a>
+          </div>
         
 
         

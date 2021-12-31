@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wolfei666.github.io/</id>
     <title>wolf</title>
-    <updated>2021-11-14T12:32:43.814Z</updated>
+    <updated>2021-12-31T11:44:05.856Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wolfei666.github.io/"/>
     <link rel="self" href="https://wolfei666.github.io/atom.xml"/>
@@ -10,6 +10,29 @@
     <logo>https://wolfei666.github.io/images/avatar.png</logo>
     <icon>https://wolfei666.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, wolf</rights>
+    <entry>
+        <title type="html"><![CDATA[记录一下mysql安装过程中遇到的问题和解决方法]]></title>
+        <id>https://wolfei666.github.io/post/ji-lu-yi-xia-mysql-an-zhuang-guo-cheng-zhong-yu-dao-de-wen-ti-he-jie-jue-fang-fa/</id>
+        <link href="https://wolfei666.github.io/post/ji-lu-yi-xia-mysql-an-zhuang-guo-cheng-zhong-yu-dao-de-wen-ti-he-jie-jue-fang-fa/">
+        </link>
+        <updated>2021-12-31T11:06:41.000Z</updated>
+        <content type="html"><![CDATA[<p>一直没怎么用过mysql,上课用的是Microsoft sqlserver，图形化界面非常方便，最近为了学习sql注入，决定装一个Mysql</p>
+<h1 id="1net-helpmsg-3534">1.NET HELPMSG 3534</h1>
+<p>这是在输入net start mysql之后出现的问题（忘记截图了）<br>
+解决方法：查看错误日志（每个人的情况不同，最好是看一下报错内容）<br>
+我的错误在于3306端口可能被占用<br>
+在cmd命令行中输入<br>
+//netstat -ano<br>
+<img src="https://wolfei666.github.io//post-images/1640949330493.png" alt="" loading="lazy"><br>
+可以看到占用3306端口的进程号<br>
+打开任务管理器-&gt;找到相关进程号即可结束进程<br>
+2.密码不对或者忘记密码<br>
+首先确认是管理员身份打开的cmd窗口；<br>
+<img src="https://wolfei666.github.io//post-images/1640949700693.png" alt="" loading="lazy"><br>
+在输入上面第一条命令之后，打开mysql/bin/data文件夹，删除所有内容<br>
+执行完所有命令之后，再次打开data文件，即可看到新生成的许多文件，找到err结尾的文件，里面可以看到新生成的密码，输入即可。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[buuctf 部分题解]]></title>
         <id>https://wolfei666.github.io/post/buuctf-bu-fen-ti-jie/</id>
