@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wolfei666.github.io/</id>
     <title>wolf</title>
-    <updated>2021-12-31T11:44:05.856Z</updated>
+    <updated>2021-12-31T11:45:42.349Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wolfei666.github.io/"/>
     <link rel="self" href="https://wolfei666.github.io/atom.xml"/>
@@ -25,9 +25,9 @@
 //netstat -ano<br>
 <img src="https://wolfei666.github.io//post-images/1640949330493.png" alt="" loading="lazy"><br>
 可以看到占用3306端口的进程号<br>
-打开任务管理器-&gt;找到相关进程号即可结束进程<br>
-2.密码不对或者忘记密码<br>
-首先确认是管理员身份打开的cmd窗口；<br>
+打开任务管理器-&gt;找到相关进程号即可结束进程</p>
+<h1 id="2密码不对或者忘记密码">2.密码不对或者忘记密码</h1>
+<p>首先确认是管理员身份打开的cmd窗口；<br>
 <img src="https://wolfei666.github.io//post-images/1640949700693.png" alt="" loading="lazy"><br>
 在输入上面第一条命令之后，打开mysql/bin/data文件夹，删除所有内容<br>
 执行完所有命令之后，再次打开data文件，即可看到新生成的许多文件，找到err结尾的文件，里面可以看到新生成的密码，输入即可。</p>
